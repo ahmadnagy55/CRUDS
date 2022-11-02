@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUDS</title>
+	<link rel="stylesheet" href="css/style.CSS">
+</head>
+
+<body>
+	<div class="cruds">
+		<div class="head">
+			<h1>CRUDS</h1>
+			<p>PRODUCT MANAGEMENT SYSTEM</p>
+		</div>
+		<div class="inputs">
+			<input type="text" class="" id="title" placeholder="title">
+			<div class="price">
+				<input onkeyup="getTotal()" type="number" class="" id="price" placeholder="price">
+				<input onkeyup="getTotal()" type="number" class="" id="taxes" placeholder="taxes">
+				<input onkeyup="getTotal()" type="number" class="" id="ads" placeholder="ads">
+				<input onkeyup="getTotal()" type="number" class="" id="discount" placeholder="discount">
+				<small id="total"></small>
+			</div>
+			<input type="number" class="" id="count" placeholder="count">
+			<input type="text" class="" id="category" placeholder="category">
+			<button id="submit">Create</button>
+		</div>
+		<div class="outputs">
+			<div class="searchBlock">
+				<input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+				<div class="btnSearch">
+					<button onclick="moodSearch(this.id)" id="searchByTitle">Search By Title</button>
+					<button onclick="moodSearch(this.id)" id="searchByCategory">Search By Category</button>
+				</div>
+			</div>
+			<div id="deleteAll"></div>
+		</div>
+		
+		<table>
+			<tr>
+				<th>id</th>
+				<th>title</th>
+				<th>price</th>
+				<th>taxes</th>
+				<th>ads</th>
+				<th>discount</th>
+				<th>total</th>
+				<th>Category</th>
+				<th>update</th>
+				<th>delete</th>
+			</tr>
+			<tbody id="tbody">
+			</tbody>
+		</table>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

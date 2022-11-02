@@ -26,7 +26,11 @@ function getTotal() {
 }
 
 // create product
-let dataPro;
+let dataPro = [
+    { "title": "relme", "price": "5000", "taxes": "200", "ads": "100", "discount": "200", "total": "5100", "count": "", "category": "net" },
+    { "title": "sumsang", "price": "7000", "taxes": "300", "ads": "150", "discount": "350", "total": "7100", "count": "", "category": "phone" },
+    { "title": "nokia", "price": "2500", "taxes": "125", "ads": "135", "discount": "400", "total": "2360", "count": "", "category": "ajax" },
+    { "title": "oppp", "price": "6000", "taxes": "75", "ads": "25", "discount": "65", "total": "6035", "count": "", "category": "phone" }];
 if (localStorage.product != null) {
     dataPro = JSON.parse(localStorage.product);
 } else {

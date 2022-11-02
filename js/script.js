@@ -44,14 +44,14 @@ submit.onclick = function () {
         && discount.value && category.value != ''
         && count.value < 101) {
         let newPro = {
-            title: title.value,
+            title: title.value.toLowerCase(),
             price: price.value,
             taxes: taxes.value,
             ads: ads.value,
             discount: discount.value,
             total: total.innerHTML,
             count: count.value,
-            category: category.value,
+            category: category.value.toLowerCase(),
         }
         // check if button submit is create or update
         if (submit.innerHTML === 'Create') {
